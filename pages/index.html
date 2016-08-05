@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+	<section>
+		{% include "header.html" with active="work" %}
+
+		<h1 class="center pt4 px2">
+			My name is <br class="sm-hide">Arun Venkatesan
+		</h1>
+		<h3 class="center pb4 px2 dark-gray">
+			I am a Product Designer with a background in Software Engineering
+		</h3>
+		<section class="clearfix max-sm mx-auto pt3 pl2 mt3">
+			{% for post in posts %}
+				<a href='/{{ post.path }}'>
+					<div class="clearfix relative col col-12 sm-col-4 pr2 pb2">
+						<img src="{{ post.thumbnail }}">
+						<div class="absolute top-0 left-0 right-0 bottom-0 py2 px3 mr2 mb2 bg-white-95 hover-show">
+							<h3>
+								{{ post.title }}
+							</h3>
+							<h5 class="mb3">
+								{{ post.tags }}
+							</h5>
+							<p class="dark-gray">
+								{{ post.description }}
+							</p>
+						</div>
+					</div>
+					</a>
+			{% endfor %}
+			
+		</section>
+		<!--<section id="thumbnails" class="clearfix">
+			{% for post in posts %}
+				<a href='/{{ post.path }}'>
+					<img class="2x" width="300" height="300" src="{{ post.thumbnail }}"/>
+					<span>{{ post.title }}</span>
+				</a>
+			{% endfor %}
+		</section>-->
+
+		<!--{% block footer %}
+			<footer id="footer">
+				<p class="small">A short description.</p>
+			</footer>
+		{% endblock footer %}-->
+	</section>
+{% endblock content %}

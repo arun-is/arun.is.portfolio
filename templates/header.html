@@ -1,0 +1,43 @@
+<header class="max-sm mx-auto">
+	<div class="flex my3 md-py4 px2">
+		{% if active == "work" %}
+			<a class="black" href="">
+				Work
+			</a>
+		{% else %}
+			<a href="">
+				Work
+			</a>
+		{% endif %}
+		<div class="flex-auto"></div>
+		{% if active == "blog" %}
+			<a class="black" href="">
+				Blog
+			</a>
+		{% else %}
+			<a href="">
+				Blog
+			</a>
+		{% endif %}
+		<div class="flex-auto"></div>
+		{% if active == "photos" %}
+			<a class="black" href="">
+				Photos
+			</a>
+		{% else %}
+			<a href="">
+				Photos
+			</a>
+		{% endif %}
+		<div class="flex-auto"></div>
+		{% if active == "about" %}
+			<a class="black" href="">
+				About
+			</a>
+		{% else %}
+			<a href="">
+				About
+			</a>
+		{% endif %}
+	</div>
+</header>

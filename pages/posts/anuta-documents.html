@@ -1,0 +1,16 @@
+title: Anuta Networks Print System
+thumbnail: static/images/anuta-documents/thumb.png
+description: I lead the design of a print design system for the markting team at Anuta Networks
+tags: print, graphic design
+date: 1-09-2013
+
+{% extends "post.html" %}
+{% block body %}
+{% filter markdown %}
+
+<img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/>
+
+Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+
+{% endfilter %}
+{% endblock body %}

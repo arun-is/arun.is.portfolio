@@ -1,0 +1,16 @@
+title: Mushi Labs Logo
+thumbnail: static/images/mushi-labs/thumb.png
+description: I designed the logo and brand for Mushi Labs, an SEO consultancy
+tags: branding, logo
+date: 14-07-2016
+
+{% extends "post.html" %}
+{% block body %}
+{% filter markdown %}
+
+<img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/>
+
+Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+
+{% endfilter %}
+{% endblock body %}
