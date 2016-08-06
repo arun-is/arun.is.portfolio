@@ -15,7 +15,7 @@
 						<img src="{{ post.thumbnail }}">
 						<div class="absolute top-0 left-0 right-0 bottom-0 py2 px3 mr2 mb2 bg-white-95 hover-show">
 							<h3 class="mb0">
-								{{ post.title }}
+								{% autoescape off %}{{ post.title }}{% endautoescape %}
 							</h3>
 							<h5 class="mt0">
 								{{ post.date|date:"Y" }}
