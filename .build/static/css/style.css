@@ -140,7 +140,7 @@ p {
 .max-nn {
     max-width: 720px;
 }
-.nn-type *:not(img) {
+.nn-type *:not(img):not(figure) {
     max-width: 720px;
     margin-left:auto;
     margin-right: auto;
