@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 	<section>
-		{% include "header.html" with active="work" %}
-
+		{% include "header.html" with active="home" %}
 		<h1 class="center pt4 px2">
 			My name is <br class="sm-hide">Arun Venkatesan
 		</h1>
@@ -15,15 +14,18 @@
 					<div class="clearfix relative col col-12 sm-col-4 pr2 pb2">
 						<img src="{{ post.thumbnail }}">
 						<div class="absolute top-0 left-0 right-0 bottom-0 py2 px3 mr2 mb2 bg-white-95 hover-show">
-							<h3>
+							<h3 class="mb0">
 								{{ post.title }}
 							</h3>
-							<h5 class="mb3">
-								{{ post.tags }}
+							<h5 class="mt0">
+								{{ post.date|date:"Y" }}
 							</h5>
-							<p class="dark-gray">
+							<p class="mt3">
 								{{ post.description }}
 							</p>
+							<h5 class="absolute bottom-0 pb3">
+								{{ post.tags }}
+							</h5>
 						</div>
 					</div>
 					</a>

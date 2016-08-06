@@ -1,10 +1,26 @@
 title: Anuta Networks Print System
+
 thumbnail: static/images/anuta-documents/thumb.png
+header: /static/images/anuta-documents/header.png
+
 description: I lead the design of a print design system for the markting team at Anuta Networks
 tags: print, graphic design
-date: 1-09-2013
+date: 06-09-2015
+client: Anuta Networks
+team: Arun Venkatesan, Kiran Sirupa
 
 {% extends "post.html" %}
+
+{% block intro %}
+{% filter markdown %}
+
+At Anuta Networks, as we developed more products and grew our marketing team, we created more marketing documents. I noticed that the team had a hard time maintaining consistency and was spending a lot of time stuck on layout, typography, color, etc.
+
+I saw this as an opportunity to create a design system serving two purposes. First, it would ensure a consistent visual style. Second, it would allow the marketing team to focus their time on the content and the message instead of design.
+
+{% endfilter %}
+{% endblock intro %}
+
 {% block body %}
 {% filter markdown %}
 

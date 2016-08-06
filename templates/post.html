@@ -1,8 +1,36 @@
 {% extends "index.html" %}
-{% block title %}{{ title }}{% endblock title %}
 {% block content %}
-
-	<section id="wrapper" class="post clearfix">
+	{% include "header.html" with active="work" %}
+	<section class="max-sm mx-auto px2">
+		<img class="2x" src="{{ header }}">
+	</section>
+	<h2 class="center mt4">
+		{{ title }}
+	</h2>
+	<section class="clearfix max-sm mx-auto pt3 pl2 mt3">
+		<div class="col col-12 sm-col-6 pr2 pb2">
+			<h4 class="dark-gray">
+				<span class="black">Date:</span> {{ date|date:"Y" }}
+			</h4>
+			<hr class="my2">
+			<h4 class="dark-gray">
+				<span class="black">Client:</span> {{ client }}
+			</h4>
+			<hr class="my2">
+			<h4 class="dark-gray">
+				<span class="black">Team:</span> {{ team }}
+			</h4>
+			<hr class="my2">
+			<h4 class="dark-gray">
+				<span class="black">Work:</span> {{ tags }}
+			</h4>
+		</div>
+		<div class="col col-12 sm-col-6 pr2 pb2">
+			{% block intro %}
+			{% endblock intro %}
+		</div>
+	</section>
+	<!--<section id="wrapper" class="post clearfix">
 		<header id="header">
 			<a href="/"><h1>Portfolio</h1></a>
 			{% block nav %}
@@ -44,6 +72,6 @@
 				</span>
 			</nav>
 		</footer>
-	</section>
+	</section>-->
 
 {% endblock content %}

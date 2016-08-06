@@ -1,0 +1,32 @@
+title: Mushi Labs Logo
+
+thumbnail: /static/images/mushi-labs/thumb.png
+header: /static/images/mushi-labs/header.png
+
+description: I designed the logo and brand for Mushi Labs, an SEO consultancy
+tags: branding, logo
+date: 14-07-2016
+client: Mushi Labs
+team: Arun Venkatesan
+
+{% extends "post.html" %}
+
+{% block intro %}
+{% filter markdown %}
+
+This is the story of how I created the logo for my friend Bernard’s SEO consultancy, Mushi Labs. It was a process full of mistakes and lessons, but at the end, I am happy with the result.
+
+It all started with a tweet from Bernard. After I tweeted about some warmup work I had posted on Dribble, my friend Bernard [tweeted me asking for help](https://twitter.com/bernardjhuang/status/747843104774881281 "Tweet").
+
+{% endfilter %}
+{% endblock intro %}
+
+{% block body %}
+{% filter markdown %}
+
+<img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/>
+
+Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+
+{% endfilter %}
+{% endblock body %}

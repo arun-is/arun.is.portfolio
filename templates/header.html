@@ -5,7 +5,7 @@
 				Work
 			</a>
 		{% else %}
-			<a href="">
+			<a class="gray" href="">
 				Work
 			</a>
 		{% endif %}
@@ -15,8 +15,18 @@
 				Blog
 			</a>
 		{% else %}
-			<a href="">
+			<a class="gray" href="">
 				Blog
+			</a>
+		{% endif %}
+		<div class="flex-auto"></div>
+		{% if active == "home" %}
+			<a style="letter-spacing: -0.3em;" class="black" href="/">
+				▲▼
+			</a>
+		{% else %}
+			<a style="letter-spacing: -0.3em;" class="gray" href="/">
+				▲▼
 			</a>
 		{% endif %}
 		<div class="flex-auto"></div>
@@ -25,7 +35,7 @@
 				Photos
 			</a>
 		{% else %}
-			<a href="">
+			<a class="gray" href="">
 				Photos
 			</a>
 		{% endif %}
@@ -35,7 +45,7 @@
 				About
 			</a>
 		{% else %}
-			<a href="">
+			<a class="gray" href="">
 				About
 			</a>
 		{% endif %}
