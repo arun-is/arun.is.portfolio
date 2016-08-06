@@ -24,9 +24,37 @@ It all started with a tweet from Bernard. After I tweeted about some warmup work
 {% block body %}
 {% filter markdown %}
 
-<img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/>
+<h3>Mistake #1: Not defining the problem:</h3>
+Since he is a friend, I had a dream of skipping the usual formality of a proposal, billing them upfront, etc. I wanted to deliver something amazing overnight. So, I started working on a full redesign of his site. I didn’t talk to him to confirm in detail what he was looking for or let him know what I was working on. 
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+I threw out my normal design process, worked all night on a single prototype of a new website in HTML/CSS and then sent him a screenshot of the responsive site I had fully built including animations:
+
+<img src="{% static '/images/mushi-labs/web.png' %}">
+
+He got back to me after talking to his cofounder and told me that while the design was better than what they had at the moment, it wasn’t significantly better. After we chatted for a while, I realized that what they really wanted is a logo.
+
+I had jumped into redesigning their website without fully understanding what the client wanted. Lesson learned. I should have followed my normal procedure and done my research to be very clear about the work I planned on doing (including sending a proposal).
+
+<h3 class="mt4">Mistake #2: Going deep before going broad:</h3>
+While chatting with Bernard, he told me that he wanted to try a Japanese themed logo that looks like a paper crane. I told him that a few startups already use a paper crane as a logo. I asked him if any other symbols interested him. He suggested a koi fish.
+
+Even though I had a feeling that it wouldn’t work, I tried it anyway. I sketched and sketched for a few days, but I couldn’t make a koi fish that worked both as a large logo and as a small favicon for a website. I talked to Bernard again and discussed the results of my exploration. We decided that it would be good to try something more geometric, what I would have originally tried if I didn’t try the koi fish logo.
+
+<img class="my3" src="{% static '/images/mushi-labs/koi_sketches.png' %}">
+
+<h3 class="mt4">Starting Over</h3>
+This is when I decided to start over and approach it the way I normally would have with any other client. I researched their competitors and collected some inspiration and references from the web and from some logo books I have on my bookshelf. 
+
+I then quickly sketched different geometric designs with pencil and paper.
+
+<img class="my3" src="{% static '/images/mushi-labs/mushi_sketches.png' %}">
+
+I then brought all the designs I liked into Illustrator to start tweaking them and visualizing them on business cards, as favicons, etc. Here are some eventually rejected logos that made it to this stage.
+
+<img class="my3" src="{% static '/images/mushi-labs/semis.png' %}">
+
+I narrowed the list to the 3 logos I would be happy to deliver to Mushi Labs. I paired each one with an appropriate typeface and created a mockup image in Photoshop to show each logo on a building sign, on a business card and on the web. I sent them off and waited.
 
 {% endfilter %}
+
 {% endblock body %}

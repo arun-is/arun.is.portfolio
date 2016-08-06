@@ -1,5 +1,5 @@
 .max-sm {
-    max-width: 66em;
+    max-width: 960px;
 }
 .svg-icon {
     fill: currentColor;
@@ -10,6 +10,9 @@ a {
 a:hover {
     text-decoration: none;
     color: #000;
+    transition: color .3s ease-in-out;
+    -moz-transition: color .3s ease-in-out;
+    -webkit-transition: color .3s ease-in-out;
 }
 .dark-gray {
     color: #999;
@@ -123,8 +126,8 @@ a:hover {
 .hover-show {
 	opacity: 0;
 	transition: opacity .3s ease-in-out;
-		-moz-transition: opacity .3s ease-in-out;
-		-webkit-transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	-webkit-transition: opacity .3s ease-in-out;
 }
 .hover-show:hover {
 	opacity: 1;
@@ -132,4 +135,13 @@ a:hover {
 
 p {
 	line-height: 1.65;
+}
+
+.max-nn {
+    max-width: 720px;
+}
+.nn-type *:not(img) {
+    max-width: 720px;
+    margin-left:auto;
+    margin-right: auto;
 }
