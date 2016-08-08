@@ -1,13 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 	<section>
-		{% include "header.html" with active="home" %}
-		<h1 class="center pt4 px2">
-			My name is <br class="sm-hide">Arun Venkatesan
+		{% include "header.html" with active="work" %}
+		<h1 class="center pt4 px2 pb3">
+			Work
 		</h1>
-		<h3 class="center pb4 px2 dark-gray">
-			I am a Product Designer with a background in Software Engineering
-		</h3>
 		<section class="clearfix max-sm mx-auto pt3 pl2 mt3">
 			{% for post in posts %}
 				<a href='/{{ post.path }}'>
