@@ -1,0 +1,34 @@
+<!--
+	Use for including a tiled image gallery. Delimit images with spaces. Syntax (wrap in curlies and percentages like normal django includes):
+
+	include "images-tiled.html" with images="/static/images/1.png /static/images/2.png /static/images/3.png"
+	TODO: is there a better way to do this? Arrays? Selectable column widths?
+-->
+
+<figure class="clearfix ml0 mr-2 pl0">
+	{% for image in images.split %}
+		{% if images.split|length == 2 %}
+			<figure class="col col-12 sm-col-6 m0 pt2 pr2">
+		{% endif %}
+		{% if images.split|length == 3 %}
+			<figure class="col col-12 sm-col-4 m0 pt2 pr2">
+		{% endif %}
+		{% if images.split|length == 4 %}
+			<figure class="col col-12 sm-col-6 m0 pt2 pr2">
+		{% endif %}
+		{% if images.split|length == 6 %}
+			<figure class="col col-12 sm-col-4 m0 pt2 pr2">
+		{% endif %}
+		{% if responsive %}
+			<a href="{{ image|responsive_image }}" data-lity>
+				<img class="2x" src="{{ image }}"/>
+		{% else %}
+			<a href="{{ image }}" data-lity>
+				<img src="{{ image }}"/>
+		{% endif %}
+			
+			</a> 
+			</figure>
+	{% endfor %}
+</figure>
+
