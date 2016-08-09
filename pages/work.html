@@ -1,32 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-	<section>
-		{% include "header.html" with active="work" %}
-		<h1 class="center pt4 px2 pb3">
-			Work
-		</h1>
-		<section class="clearfix max-sm mx-auto pt3 pl2 mt3">
-			{% for post in posts %}
-				<a href='/{{ post.path }}'>
-					<div class="clearfix relative col col-12 sm-col-4 pr2 pb2">
-						<img src="{{ post.thumbnail }}">
-						<div class="absolute top-0 left-0 right-0 bottom-0 py2 px3 mr2 mb2 bg-white-95 hover-show">
-							<h3 class="mb0">
-								{% autoescape off %}{{ post.title }}{% endautoescape %}
-							</h3>
-							<h5 class="mt0">
-								{{ post.date|date:"Y" }}
-							</h5>
-							<p class="mt3">
-								{{ post.description }}
-							</p>
-							<h5 class="absolute bottom-0 pb3">
-								{{ post.tags }}
-							</h5>
-						</div>
+	{% include "header.html" with active="work" %}
+	{% include "title.html" with title="Work" %}
+	<section class="flex-1 clearfix max-sm mx-auto pt3 pl2 mt3">
+		{% for post in posts %}
+			<a href='/{{ post.path }}'>
+				<div class="clearfix relative col col-12 sm-col-4 pr2 pb2">
+					<img src="{{ post.thumbnail }}">
+					<div class="absolute top-0 left-0 right-0 bottom-0 py2 px3 mr2 mb2 bg-white-95 hover-show">
+						<h3 class="mb0">
+							{% autoescape off %}{{ post.title }}{% endautoescape %}
+						</h3>
+						<h5 class="mt0">
+							{{ post.date|date:"Y" }}
+						</h5>
+						<p class="mt3">
+							{{ post.description }}
+						</p>
+						<h5 class="absolute bottom-0 pb3">
+							{{ post.tags }}
+						</h5>
 					</div>
-					</a>
-			{% endfor %}
-		</section>
+				</div>
+				</a>
+		{% endfor %}
 	</section>
+	{% include "footer.html"%}
 {% endblock content %}

@@ -1,0 +1,21 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11.4//EN
+N:Venkatesan;Arun;;;
+FN:Arun Venkatesan
+EMAIL;type=INTERNET;type=HOME;type=pref:dallasarun@gmail.com
+TEL;type=CELL;type=VOICE;type=pref:+1 (732) 784-8233
+X-SOCIALPROFILE;type=twitter:http://twitter.com/zhenpixels
+X-SOCIALPROFILE;type=facebook:http://facebook.com/arunv
+X-SOCIALPROFILE;type=flickr:http://www.flickr.com/photos/ddrmaxgt37
+X-SOCIALPROFILE;type=linkedin:http://www.linkedin.com/in/arunve
+item1.URL;type=pref:http://www.arun.is
+item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:http://www.dribbble.com/arunv
+item2.X-ABLabel:dribbble
+IMPP;X-SERVICE-TYPE=Skype;type=HOME;type=pref:skype:ddrmaxgt37
+IMPP;X-SERVICE-TYPE=Facebook;type=HOME:xmpp:arunv
+IMPP;X-SERVICE-TYPE=GoogleTalk;type=HOME:xmpp:dallasarun@gmail.com
+UID:7029b5af1277b914
+X-ABUID:BCD2B1B7-FD17-4036-8468-D842BBABA6A9:ABPerson
+END:VCARD

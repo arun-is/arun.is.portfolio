@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+	{% include "header.html" with active="about" %}
+	{% include "title.html" with title="About Me" %}
+	<section class="flex-1 clearfix max-sm nn-type mx-auto mt0 md-pt3 px2">
+{% filter markdown %}
+I'm a product designer with a keen interest in design systems and bridging the gap between engineering and design.
+
+Formerly, I was the lead product designer at Anuta Networks after joining as their first engineering hire.
+
+Before that, I was a student at Columbia University where I received a B.S. in Electrical Engineering and studied Chinese Language and East Asian Culture.
+
+I love taking photographs, running, traveling and cooking.
+
+<a href="/static/documents/Arun_Venkatesan_Resume.pdf">Resume</a>
+
+<!--<a href="/static/documents/Arun_Venkatesan.vcf">VCard</a>-->
+
+<h2 class="gray flex my4" style="width:100%"><a class="dribbble-link" href="http://www.dribbble.com/arunv">{% include 'icons/dribbble.html' %}</a> <a class="facebook-link" href="http://fb.me/arunv">{% include 'icons/facebook.html' %}</a> <a class="flickr-link" href="http://www.flickr.com/photos/ddrmaxgt37/">{% include 'icons/flickr.html' %}</a> <a class="instagram-link" href="https://www.instagram.com/zhenpixels/">{% include 'icons/instagram.html' %}</a> <a class="linkedin-link" href="https://www.linkedin.com/in/arunve">{% include 'icons/linkedin.html' %}</a> <a class="tumblr-link" href="http://zhenpixels.tumblr.com"> {% include 'icons/tumblr.html' %}</a> <a class="twitter-link" href="https://twitter.com/zhenpixels">{% include 'icons/twitter.html' %}</a></h2>
+
+{% endfilter %}
+	</section>
+	{% include "footer.html"%}
+{% endblock content %}
