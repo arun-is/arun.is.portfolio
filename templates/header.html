@@ -9,15 +9,16 @@
 				Work
 			</a>
 		{% endif %}
-		{% if active == "blog" %}
-			<a class="flex-auto black" href="/blog.html">
-				Blog
+		{% if active == "photos" %}
+			<a class="flex-auto black" href="">
+				Photos
 			</a>
 		{% else %}
-			<a class="flex-auto gray" href="/blog.html">
-				Blog
+			<a class="flex-auto gray" href="">
+				Photos
 			</a>
 		{% endif %}
+		
 		{% if active == "home" %}
 			<a style="letter-spacing: -0.3em;" class="black" href="/">
 				▲▼
@@ -27,13 +28,13 @@
 				▲▼
 			</a>
 		{% endif %}
-		{% if active == "photos" %}
-			<a class="flex-auto right-align black" href="">
-				Photos
+		{% if active == "blog" %}
+			<a class="flex-auto right-align black" href="/blog.html">
+				Blog
 			</a>
 		{% else %}
-			<a class="flex-auto right-align gray" href="">
-				Photos
+			<a class="flex-auto right-align gray" href="/blog.html">
+				Blog
 			</a>
 		{% endif %}
 		{% if active == "about" %}
