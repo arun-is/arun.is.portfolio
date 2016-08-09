@@ -11,6 +11,7 @@ body {
 
 .max-sm {
     max-width: 960px;
+    width: 100%;
 }
 .svg-icon {
     fill: currentColor;
@@ -150,6 +151,7 @@ p,li {
 
 .max-nn {
     max-width: 720px;
+    width: 100%;
 }
 .nn-type *:not(img):not(figure) {
     max-width: 720px;
