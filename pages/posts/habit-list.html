@@ -9,11 +9,37 @@ team: Arun Venkatesan
 tools: Sketch, Framer, Invision
 
 {% extends "post.html" %}
-{% block body %}
+
+{% block intro %}
 {% filter markdown %}
 
+I decided to redesign Habit List, a tracker that helps me build and maintain habits. Since lot of functionality was obscured in favor of aesthetic minimalism, I wanted to completely redesign the app from the ground up.
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+{% endfilter %}
+{% endblock intro %}
+
+{% block body %}
+{% filter markdown %}
+<h3 class="mb2">Generative Research</h3>
+I defined the problem by better understanding what I think about the app and doing some basic testing. I’d hand my phone to a friend and quickly explain what the app does, asking them to perform a specific task. For example “Can you create a habit called ‘walk the dog’ and put it before ‘meditate’?” I observed them and took notes, continuing to ask followup questions like “What did you expect to happen?” and “Did you face any difficulty?”.
+
+Adding to generative research, I wanted to find out what other users of the app think, so I read all app store reviews. I noted top feedback, paying close attention to reviews along the lines of “I love the app, but this one thing annoys me…” I then broadened my research to Habit Lists’s competitors, installing 15 similar apps. This gave me a range of insights from a high level architecture of the different ways the problem can be approached all the way down to specific microinteractions.
+
+From this research, I created list of things the app does well and things that need improvement. For example, I thought that the app is very good at focusing on the habits that need to be completed today and making it easy to complete them. However, something like missing a habit (used when you want to remove it from the list because you already know you won’t finish it) is performed using a difficult to discover feature.
+
+<h3 class="mb2">Storyboarding & UX</h3>
+oryboarded 9 different flows based on my research and experience before deciding to focus on 5 core screens, Habit List, Habit Details, Settings, Stats screen, Passcode lock / TouchID screen. My process was in designing the flows and screens follows.
+
+- Pen & Paper: Use pen, paper and some home made cardboard templates to quickly sketch ideas, keeping the fidelity as low as possible.
+- Prototype: Critique and select the best sketches to digitize them to create static mockups in Sketch. I imported those mockups into Invision to create clickable prototypes, using Framer for more complicated interactions.
+- Test: I would test the prototypes with friends as I’d done earlier. I handed them my phone and asked them to perform a task, followed by a few questions to understand what they felt and thought.
+- Decide: Choose the best option among the many ideas, showing my work often to other designers for critique.
+
+<h3 class="mb2">Visual Design</h3>
+
+My general visual design process followed pretty similarly to the UX process, I’d reference Dribbble, and other designer’s portfolios for ideas and inspiration. I’d then diverge and quickly mocked up different visual treatments while keeping a copy of each iteration. Alt+drag and ⌘+d in Sketch were my friends in this stage. Some of these visual designs actually required small changes to the layout and control schemes that were decided earlier. 
+
+I chose the top few visual treatments and mocked up the core screens to see how they worked across the product. I was also lucky to have my work reviewed on video twice via spec.fm’s inspect series.
 
 {% endfilter %}
 {% endblock body %}
