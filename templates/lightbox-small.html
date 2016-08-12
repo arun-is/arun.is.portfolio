@@ -1,0 +1,15 @@
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+{% if responsive %}
+<figure class="max-nn mx-auto mx0">
+	<a href="{{ link|responsive_image }}" data-lity>
+	   <img class="2x" src="{{ link }}"/>
+	</a> 
+</figure>
+{% else %}
+<figure class="max-sm mx0 py2">
+	<a href="{{ link }}" data-lity>
+	   <img src="{{ link }}"/>
+	</a> 
+</figure>
+{% endif %}
+
