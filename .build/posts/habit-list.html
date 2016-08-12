@@ -106,14 +106,14 @@ body{font-size:110%;display:flex;min-height:100vh;flex-direction:column}.flex-1{
 		</div>
 		<div class="col col-12 sm-col-6 pr2">
 			
-<p>I decided to redesign Habit List, a tracker that helps me build and maintain habits. Since lot of functionality was obscured in favor of aesthetic minimalism, I wanted to completely redesign the app from the ground up.</p>
+<p>I regularly use Habit List, a tracker that helps me build and maintain habits. Over time, I discovered that a lot of functionality was obscured in favor of aesthetic minimalism, regularly frustrating me. Hence, I decided to completely redesign the app from the ground up.</p>
 
 
 		</div>
 	</section>
 	<section class="flex-1 clearfix max-sm nn-type mx-auto mt0 md-pt3 px2">
 		
-<h3 class="mb2">Generative Research</h3>
+<h2 class="mb2">Generative Research</h2>
 
 <p>I defined the problem by better understanding what I think about the app and doing some basic testing. I’d hand my phone to a friend and quickly explain what the app does, asking them to perform a specific task. For example “Can you create a habit called ‘walk the dog’ and put it before ‘meditate’?” I observed them and took notes, continuing to ask followup questions like “What did you expect to happen?” and “Did you face any difficulty?”.</p>
 
@@ -121,22 +121,178 @@ body{font-size:110%;display:flex;min-height:100vh;flex-direction:column}.flex-1{
 
 <p>From this research, I created list of things the app does well and things that need improvement. For example, I thought that the app is very good at focusing on the habits that need to be completed today and making it easy to complete them. However, something like missing a habit (used when you want to remove it from the list because you already know you won’t finish it) is performed using a difficult to discover feature.</p>
 
-<h3 class="mb2">Storyboarding & UX</h3>
+<h2 class="mt4 mb2">Storyboarding & UX</h2>
 
-<p>oryboarded 9 different flows based on my research and experience before deciding to focus on 5 core screens, Habit List, Habit Details, Settings, Stats screen, Passcode lock / TouchID screen. My process was in designing the flows and screens follows.</p>
+<p>I storyboarded 9 different flows based on my research and experience before deciding to focus on 5 core screens: Habit List, Habit Details, Settings, Stats, Lock screen. I followed these steps in my process.</p>
 
 <ul>
-<li>Pen &amp; Paper: Use pen, paper and some home made cardboard templates to quickly sketch ideas, keeping the fidelity as low as possible.</li>
-<li>Prototype: Critique and select the best sketches to digitize them to create static mockups in Sketch. I imported those mockups into Invision to create clickable prototypes, using Framer for more complicated interactions.</li>
+<li>Pen &amp; Paper: I used pen, paper and some home made cardboard templates to quickly sketch ideas, keeping the fidelity as low as possible. I would use other apps and mobile pattern websites as reference at this stage.</li>
+<li>Prototype: Critique and select the best sketches to transform into static mockups in Sketch. I imported those mockups into Invision to create clickable prototypes and used Framer for more complicated interactions.</li>
 <li>Test: I would test the prototypes with friends as I’d done earlier. I handed them my phone and asked them to perform a task, followed by a few questions to understand what they felt and thought.</li>
-<li>Decide: Choose the best option among the many ideas, showing my work often to other designers for critique.</li>
+<li>Decide: I chose the best option among the many ideas, showing my work to friends for critique.</li>
 </ul>
 
-<h3 class="mb2">Visual Design</h3>
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
 
-<p>My general visual design process followed pretty similarly to the UX process, I’d reference Dribbble, and other designer’s portfolios for ideas and inspiration. I’d then diverge and quickly mocked up different visual treatments while keeping a copy of each iteration. Alt+drag and ⌘+d in Sketch were my friends in this stage. Some of these visual designs actually required small changes to the layout and control schemes that were decided earlier. </p>
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/Sketches@2x.jpg" data-lity>
+       <img class="2x" src="/static/images/habit-list/Sketches.jpg"/>
+    </a> 
+</figure>
 
-<p>I chose the top few visual treatments and mocked up the core screens to see how they worked across the product. I was also lucky to have my work reviewed on video twice via spec.fm’s inspect series.</p>
+<h2 class="mt4 mb2">Visual Design</h2>
+
+<p>My general visual design process followed pretty similarly to the UX process, I’d reference Dribbble, and other designer’s portfolios for ideas and inspiration. I’d then diverge and quickly mocked up different visual treatments while keeping a copy of each iteration. Alt+drag and ⌘+d in Sketch were my friends in this stage. Some of these visual designs actually required small changes to the layout and control schemes that were decided earlier.</p>
+
+<p>One key consideration when working on visual design was color blind friendliness. One of the issues I have with the original app is that the green and orange-red used are difficult to discern between. Having a color blind roommate was an asset at this stage. I could easily find out if things didn’t work.</p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/Visuals@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/Visuals.png"/>
+    </a> 
+</figure>
+
+<p>I chose the top few visual treatments and mocked up the core screens to see how they worked across the product. I was also lucky to have my work reviewed on video twice via <a href="https://spec.fm/" title="spec.fm">spec.fm</a>’s inspect series.</p>
+
+<figure class="clearfix ml0 mr-2 pl0">
+        <figure class="col col-12 sm-col-6 m0 pt2 pr2">
+            <a href="https://youtu.be/lgf16bANQBs" data-lity>
+                <img class="2x" src="/static/images/habit-list/video1.png"/>
+            </a> 
+        </figure>
+        <figure class="col col-12 sm-col-6 m0 pt2 pr2">
+            <a href="https://youtu.be/ej3EVqO5Kak" data-lity>
+                <img class="2x" src="/static/images/habit-list/video2.png"/>
+            </a> 
+        </figure>
+</figure>
+
+<h2 class="mt4 mb2">The Finished Product</h2>
+
+<h3 class="mb2">Revealing Hidden Views</h3>
+
+<p>In the old app, the date picker (used to view older dates), list editing, stats and settings were all hidden behind a single hamburger-esque menu rendered as a back button. In my redesign, I placed them on the main screen and added a tabbar</p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/MainScreen@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/MainScreen.png"/>
+    </a> 
+</figure>
+
+<h3 class="mt4 mb2">Revealing Skip & Miss</h3>
+
+<p>In the old app, Skipping and Missing habits was only possible through a modal that is accessed by long pressing a habit. In my redesign, I put skip and miss functionality in a swipe menu and also in the habit details screen.</p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/ViewHabit@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/ViewHabit.png"/>
+    </a> 
+</figure>
+
+<h3 class="mt4 mb2">Calendar View</h3>
+
+<p>In the old app, viewing older dates required repeatedly switching between the history and today views. Also, accessing dates older than a few days old was tedious. In my redesign, I integrated a calendar view inspired by Sunrise Calendar that switches the currently viewed date. It’s accessed by clicking the calendar icon on the top left of the main screen.</p>
+
+<p><a href="http://share.framerjs.com/dnmd9itejwhh/" title="framerjs.com">Try out my Framer prototype</a></p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/Calendar@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/Calendar.png"/>
+    </a> 
+</figure>
+
+<h3 class="mt4 mb2">Settings Screen</h3>
+
+<p>I removed extraneous features and items from the settings screen and created a new set of icons to fit my overall visual style.</p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/Settings@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/Settings.png"/>
+    </a> 
+</figure>
+
+<h3 class="mt4 mb2">Lock Screen</h3>
+
+<p>I made a redesigned lock screen to look more like the iOS default and included touchID (a feature requested by many people in iTunes reviews).</p>
+
+<p><a href="http://share.framerjs.com/13hc95u8yolc/" title="framerjs.com">Try out my Framer prototype with the code 1234</a></p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/LockScreen@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/LockScreen.png"/>
+    </a> 
+</figure>
+
+<h3 class="mt4 mb2">Vacation Mode</h3>
+
+<p>Many people requested a way to temporarily pause the app while on vacation, effectively removing penalties for not finishing tasks. I tried many different ways of indicating it including using banners, different colors and alerts. I finally came up with this idea of showing a vacation themed pattern in the navigation and status bar.</p>
+
+<p><a href="http://share.framerjs.com/8m4dfgye4hkr/" title="framerjs.com">Try out my Framer prototype</a></p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/VacationMode@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/VacationMode.png"/>
+    </a> 
+</figure>
+
+<h3 class="mt4 mb2">Stats</h3>
+
+<p>I created a set of screens to show stats. This was a lengthy process that required understanding the type of analysis that could be provided given the data collected and then narrowing it down to the most important. Then I had to visualize that data.</p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/Stats@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/Stats.png"/>
+    </a> 
+</figure>
+
+<h3 class="mt4 mb2">App Icon</h3>
+
+<p>I finished the process by redesigning the app icon. I cleaned up the curves of the infinity and changed the color of the circle to match the gradient used elsewhere in the app.</p>
+
+<!-- if responsive, set 2x class on img and link to the 2x image using the responsive filter-->
+
+<figure class="max-sm mx0">
+    <a href="/static/images/habit-list/finals/Icon@2x.png" data-lity>
+       <img class="2x" src="/static/images/habit-list/finals/Icon.png"/>
+    </a> 
+</figure>
+
+<h2 class="mt4 mb2">Final Thoughts</h2>
+
+<h3 class="mt4 mb2">Learnings</h3>
+
+<ul>
+<li>A seemingly simple app actually can have a large number of screens. I didn’t do a good job of estimating how much work was involved and spent much more time that I originally planned on this.</li>
+<li>I learned how to create prototypes in Framer and Invision and to do basic testing with them.</li>
+<li>I learned the benefits of keeping files, symbols and shared styles organized from the beginning instead of cleaning them up later.</li>
+<li>I learned about creating a cohesive set of icons by creating 6 icons for the settings screen and 3 icons (with 2 states each) for the tab bar.</li>
+</ul>
+
+<h3 class="mt4 mb2">Things I would do differently</h3>
+
+<ul>
+<li>I think the lightness and whitespace of the original was lost in mine. I would try to stay closed to the original visual style while still making the same changes in UX.</li>
+<li>I would ask for feedback earlier and more often.</li>
+<li>I would show in-process work to others instead of showing finished polished work so that I can catch problems earlier.</li>
+<li>I want to to stray more from iOS defaults to explore non-standard interactions and visual design.</li>
+<li>I would also think about how to design the app for Android (following Material Design) since many apps have an Android counterpart.</li>
+</ul>
 
 
 	</section>
