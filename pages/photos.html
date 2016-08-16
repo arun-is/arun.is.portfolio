@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+	{% include "header.html" with active="photos" %}
+	{% include "title.html" with title="Photos" %}
+	<section class="flex-1 clearfix max-sm nn-type mx-auto mt0 md-pt3 px2">
+{% filter markdown %}
+{% include "lightbox.html" with link="/static/images/photos/DSC04952-Pano-Edit.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC02720.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC04102.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC09063-2.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC04707.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC08906.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC02119.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC04707.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC04982.jpg" responsive=True%}
+{% include "spacer.html" %}
+{% include "lightbox.html" with link="/static/images/photos/DSC03337.jpg" responsive=True%}
+{% endfilter %}
+
+	</section>
+	{% include "footer.html"%}
+{% endblock content %}
