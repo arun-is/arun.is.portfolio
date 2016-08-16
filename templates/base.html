@@ -17,7 +17,7 @@
 	<meta property="og:title" content="{% block og-title %}Arun Venkatesan{% endblock %}" />
 	<meta property="og:type" content="{% block og-type %}website{% endblock %}" />
 	<meta property="og:image" content="{% block og-image %}http://www.arun.is/static/images/OpenGraph.png{% endblock %}" />
-	<meta property="article:author" content="23917660">
+	{% block og-author %}{% endblock %}
 
 	{% include 'basscss.html' %}
 	{% include 'ga.html' %}
