@@ -1,4 +1,7 @@
 {% extends "index.html" %}
+{% block og-title %}{{ title }}{% endblock %}
+{% block og-image %}{{ header }}{% endblock %}
+{% block og-type %}article{% endblock %}
 {% block content %}
 	{% include "header.html" with active="work" %}
 	<section class="max-sm mx-auto center px2 pb2">
