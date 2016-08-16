@@ -15,7 +15,7 @@ tools: InDesign, Illustrator
 {% block intro %}
 {% filter markdown %}
 
-At Anuta Networks, as we developed more products and grew our marketing team, we created more marketing documents. I noticed that the team had a hard time maintaining consistency and was spending a lot of time stuck on layout, typography, color, etc.
+At Anuta Networks, as we developed more products and grew our marketing team, we created more print documents. I noticed that the team had a hard time maintaining consistency and was spending a lot of time stuck on layout, typography, color, etc. 
 
 I saw this as an opportunity to create a design system serving two purposes. First, it would ensure a consistent visual style. Second, it would allow the marketing team to focus their time on the content and the message instead of design.
 
@@ -24,9 +24,71 @@ I saw this as an opportunity to create a design system serving two purposes. Fir
 
 {% block body %}
 {% filter markdown %}
+<h2 class="mb2">Understanding The Creators</h2>
+I started the process by sitting with team members who were creating the documents to watch them and then understand and discuss how they approached document creation and maintenance. I wanted to know their process in detail from the moment they start thinking about the new document all the way to when they are finally publishing and distributing the document.
+
+This is what we learned:
+
+- The process usually started by modifying an existing document.
+- Most documents were being printed at the office on normal letter size paper to save the cost of professional printing.
+- Some documents were being printed in Europe or Japan if they were being used at an overseas conference.
+- Most time was being lost when modifying an existing layout to accommodate a new graph or figure. I saw that adding a figure could ruin a 2 column layout or even add a third page to a two page layout.
+-Even though we had a set of brand guidelines dictating use of type, color, terms, the company logo, etc. there were still inconsistencies among documents made by different people
+
+<h2 class="mt4 mb2">Understanding The Readers</h2>
+
+I also went to a industry conference to observe how people received our existing marketing materials in printed form. What we learned was that even though people would do their best to read and understand the summary of the product, they would still approach a team member to explain the product to them. 
+
+Further, visitors spent a long time looking at some of the complex diagrams that our engineering team had drawn. Then they would still ask basic questions like “where does your product fit in the system”. Some diagrams were up to 10 levels deep, showing not only how our product fits into a customer’s large system but also how our product’s sub systems and sub-sub-systems fit together.
+
+<h2 class="mt4 mb2">Initial Constraints</h2>
+
+From our research, we were able to derive a set of constraints that we could explore within:
+
+- Moving, removing and replacing sections in the documents needs to be easy
+- We need to handle both letter size and A4 size paper
+- We need to minimize ink usage to save cost
+- Because of the quality of the printer, we need to avoid large color fills since they can print inconsistently
+
+The marketing team and I sorted the documents into three types each with a unique flow and structure, ie. Datasheets, Whitepapers & Case Studies. I then took every document that had been already produced to break them into components. This helped us better understand their structure and overall intent. We then explored different ways of structuring the components to better achieve the document’s goals and tell the story.
+
+At the end of this process, we had an idea of the modular pieces that would be required and the order that they would be placed in the 3 major categories of document.
+
+<h2 class="mt4 mb2">The Design Process</h2>
+
+The next step was exploring different visual treatments that would lend to the modular structure of the documents.
+
+I decided to reference Josef Müller-Brockmann’s *Grid Systems*. The best practices and advice from the book provided me a set of sensible defaults to start with. I knew that grid systems would both make the documents easier to read, but also easier to create.
+
+I started first with the layout, trying a few different options, getting feedback from the team and then deciding on one layout. With the layout decided, I continued designing each module, diagram, illustration, etc. At each stage, I would show a few works in progress to the team and then pursue the best one.
+
+<h2 class="mt4 mb2">Final Deliverables</h2>
+<h3 class="mb2">The Design System</h3>
+
+Finally, I delivered a set of templates for each of the three types of document, general guidelines on how to structure them and guidelines for how to print them. The system was centered on a set of modules like bulleted list, paragraph text, quote, price list, illustration, diagram, etc.
+
+{% include "lightbox-small.html" with link="/static/images/anuta-documents/Closeup.png" responsive=True%}
+
+I color coded the documents based on their type and procedurally generated headers for each document. This made it easier to discern between different documents when they are all side by side at a trade show.
+
+{% include "lightbox-small.html" with link="/static/images/anuta-documents/ThreeTypes.png" responsive=True%}
 
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+<h3 class="mt4 mb2">Creating Simpler Diagrams</h3>
+
+I also created guidelines to solve the problem of the complicated, highly nested diagrams. I showed how splitting a single highly-nested diagram into multiple diagrams can more coherently convey the same message in a similar amount of space. One example was with a diagram that showed both where our product fits in a larger system and also its inner subcomponents. I split it into two diagrams, one showing the larger system and one showing the inner workings of the product.
+
+{% include "lightbox-small.html" with link="/static/images/anuta-documents/Diagram.png" responsive=True%}
+
+<h2 class="mt4 mb2">Final Thoughts</h2>
+<h3 class="mb2">What I Learned</h3>
+- Including as many relevant team members as possible dramatically increased how much people cared and invested in the project
+- Involving non-design team members in evert step of the process, broke down the mysterious, “magical” perception of design
+
+<h3 class="mb2">What I Would Do Differently</h3>
+- I could have sought out feedback from designers outside the company. I was scared of showing my work to other designers and being given negative feedback.
+- I used InDesign for the project, but that meant having to train team members to use it and increasing costs for the company. I think I should have at least tried solving the problem with existing tools like Microsoft Word.
+
 
 {% endfilter %}
 {% endblock body %}
