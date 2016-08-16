@@ -8,7 +8,7 @@
 		I am a Product Designer with a background in Software Engineering
 	</h3>
 	<section class="flex-1 clearfix max-sm mx-auto pt3 pl2 mt3">
-		{% for post in posts %}
+		{% for post in frontpage_posts %}
 			<a href='/{{ post.path }}'>
 				<div class="clearfix relative col col-12 sm-col-4 pr2 pb2">
 					<img class="2x" src="{{ post.thumbnail }}">

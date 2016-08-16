@@ -6,7 +6,7 @@ from django.template import Context
 from django.template.loader import get_template
 from django.template.loader_tags import BlockNode, ExtendsNode
 
-Global = {"config": {}, "posts": []}
+Global = {"config": {}, "posts": [], "frontpage_posts": []}
 
 Global["config"]["path"] = "posts"
 Global["config"]["date_format"] = "%d-%m-%Y"
@@ -34,7 +34,7 @@ def preBuild(site):
 			context_post = {"path": page.path}
 
 			# Check if we have the required keys
-			for field in ["title", "date", "tags", "thumbnail", "description", "client", "team", "tools"]:
+			for field in ["title", "date", "tags", "thumbnail", "description", "client", "team", "tools", "frontpage"]:
 				
 				if not context.has_key(field):
 					logging.warning("Page %s is missing field: %s" % (page.path, field))
@@ -57,9 +57,12 @@ def preBuild(site):
 
 			Global["posts"].append(context_post)
 
+			
+
 	# Sort the posts by date and add the next and previous page indexes
 	Global["posts"] = sorted(Global["posts"], key=lambda x: x.get("date"))
 	Global["posts"].reverse()
+
 	
 	indexes = xrange(0, len(Global["posts"]))
 	
@@ -67,10 +70,17 @@ def preBuild(site):
 		if i+1 in indexes: Global["posts"][i]['prevPost'] = Global["posts"][i+1]
 		if i-1 in indexes: Global["posts"][i]['nextPost'] = Global["posts"][i-1]
 
+	for post in Global["posts"]:
+		if post.has_key("frontpage"):
+				Global["frontpage_posts"].append(post)
+
+	Global["frontpage_posts"] = sorted(Global["frontpage_posts"], key=lambda x: x.get("frontpage"))
+
 
 def preBuildPage(site, page, context, data):
 	
 	context['posts'] = Global["posts"]
+	context['frontpage_posts'] = Global["frontpage_posts"]
 	
 	for post in Global["posts"]:
 		if post["path"] == page.path:
