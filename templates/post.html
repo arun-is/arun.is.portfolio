@@ -44,24 +44,5 @@
 		{% block body %}
 		{% endblock body %}
 	</section>
-	<footer class="clearfix max-sm mx-auto" style="width:100%">
-		<nav class="px2 pt4">
-			<span class="left">
-				{% if nextPost %}
-					<a href='/{{ nextPost.path }}'>
-						&larr; {% autoescape off %}{{ nextPost.title }}{% endautoescape %} 
-					</a>
-				{% endif %}
-			</span>			
-			<span class="right">
-			{% if prevPost %}
-				<a href='/{{ prevPost.path }}'>
-					{% autoescape off %}{{ prevPost.title }}{% endautoescape %} &rarr;
-				</a>
-			{% endif %}
-			</span>
-		</nav>
-	</footer>
 	{% include "footer.html"%}
-
 {% endblock content %}
