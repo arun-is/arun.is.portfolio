@@ -2,9 +2,13 @@
 {% block title %}About - Arun Venkatesan{% endblock %}
 {% block content %}
 	{% include "header.html" with active="about" %}
-	{% include "title.html" with title="About Me" %}
 	<section class="flex-1 clearfix max-sm nn-type mx-auto mt0 md-pt3 px2">
 {% filter markdown %}
+
+<div class="clearfix col-12 pt4 md-pt0 pb4">
+<img class="2x block col-12 sm-col-6 mx-auto border circle" src="/static/images/Headshot.jpg">
+</div>
+
 I'm a product designer with a keen interest in design systems and bridging the gap between engineering and design.
 
 Formerly, I was the lead product designer at Anuta Networks after joining as their first engineering hire.
