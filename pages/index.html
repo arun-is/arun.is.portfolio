@@ -11,7 +11,7 @@
 		{% for post in frontpage_posts %}
 			<a href='/{{ post.path }}'>
 				<div class="clearfix relative col col-12 sm-col-4 pr2 pb2">
-					<img class="2x" src="{{ post.thumbnail }}">
+					<img class="2x col-12" src="{{ post.thumbnail }}">
 					<div class="absolute top-0 left-0 right-0 bottom-0 py2 px3 mr2 mb2 bg-white-95 hover-show">
 						<h3 class="mb0">
 							{% autoescape off %}{{ post.title }}{% endautoescape %}
