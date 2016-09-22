@@ -50,6 +50,26 @@ a:hover {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#7ffbff', endColorstr='#7fbfff', GradientType=1);
 }
 @media (min-width: 52em) {
+    .md-pt0,
+    .md-py0 {
+        padding-top: 0rem;
+    }
+    .md-pr0,
+    .md-px0 {
+        padding-right: 0rem;
+    }
+    .md-pb0,
+    .md-py0 {
+        padding-bottom: 0rem;
+    }
+    .md-pl0,
+    .md-px0 {
+        padding-left: 0rem;
+    }
+    .md-p0{
+        padding: 0rem;
+    }
+
 	.md-pt1,
     .md-py1 {
         padding-top: .5rem;
