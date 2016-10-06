@@ -1,66 +1,60 @@
 <header class="max-sm mx-auto" style="width:100%;">
-	<div class="flex py2 md-py4 px2">
+	<div class="md-hide center pt2">
+	{% if active == "home" %}
+		<a style="letter-spacing: -0.3em;" class="black" href="/">
+			▲▼
+		</a>
+	{% else %}
+		<a style="letter-spacing: -0.3em;" class="gray" href="/">
+			▲▼
+		</a>
+	{% endif %}
+	</div>
+	<div class="flex flex-justify py3 md-py4 px2">
 		{% if active == "work" %}
-			<span class="flex-auto">
-				<a class="black" href="/work.html">
-					Work
-				</a>
-			</span>
+			<a class="black" href="/work.html">
+				Work
+			</a>
 		{% else %}
-			<span class="flex-auto">
-				<a class="gray" href="/work.html">
-					Work
-				</a>
-			</span>
+			<a class="gray" href="/work.html">
+				Work
+			</a>
 		{% endif %}
 		{% if active == "photos" %}
-			<span class="flex-auto">
-				<a class="black" href="/photos.html">
-					Photos
-				</a>
-			</span>
+			<a class="black" href="/photos.html">
+				Photos
+			</a>
 		{% else %}
-			<span class="flex-auto">
-				<a class="gray" href="/photos.html">
-					Photos
-				</a>
-			</span>
+			<a class="gray" href="/photos.html">
+				Photos
+			</a>
 		{% endif %}
-		
 		{% if active == "home" %}
-			<a style="letter-spacing: -0.3em;" class="black" href="/">
+			<a style="letter-spacing: -0.3em;" class="md-show black" href="/">
 				▲▼
 			</a>
 		{% else %}
-			<a style="letter-spacing: -0.3em;" class="gray" href="/">
+			<a style="letter-spacing: -0.3em;" class="md-show gray" href="/">
 				▲▼
 			</a>
 		{% endif %}
 		{% if active == "blog" %}
-			<span class="flex-auto right-align">
-				<a class="right-align black" href="/blog.html">
-					Blog
-				</a>
-			</span>
+			<a class="right-align black" href="/blog.html">
+				Blog
+			</a>
 		{% else %}
-			<span class="flex-auto right-align">
-				<a class="gray" href="/blog.html">
-					Blog
-				</a>
-			</span>
+			<a class="gray" href="/blog.html">
+				Blog
+			</a>
 		{% endif %}
 		{% if active == "about" %}
-			<span class="flex-auto right-align">
-				<a class="black" href="/about.html">
-					About
-				</a>
-			</span>
+			<a class="black" href="/about.html">
+				About
+			</a>
 		{% else %}
-			<span class="flex-auto right-align">
-				<a class="gray" href="/about.html">
-					About
-				</a>
-			</span>
+			<a class="gray" href="/about.html">
+				About
+			</a>
 		{% endif %}
 	</div>
 </header>
