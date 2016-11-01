@@ -7,28 +7,12 @@
 	<h3 class="center pb4 px2 dark-gray">
 		I am a Product Designer with a background in Software Engineering
 	</h3>
-	<section class="flex-1 clearfix max-sm mx-auto pt3 pl2">
-		{% for post in frontpage_posts %}
-			<a href='/{{ post.path }}'>
-				<div class="clearfix relative col col-12 sm-col-4 pr2 pb2">
-					<img class="2x col-12" src="{{ post.thumbnail }}">
-					<div class="absolute top-0 left-0 right-0 bottom-0 py2 px3 mr2 mb2 bg-white-95 hover-show">
-						<h3 class="mb0">
-							{% autoescape off %}{{ post.title }}{% endautoescape %}
-						</h3>
-						<h5 class="mt0">
-							{{ post.date|date:"Y" }}
-						</h5>
-						<p class="mt3 md-show">
-							{{ post.description }}
-						</p>
-						<h5 class="absolute bottom-0 pb3">
-							{{ post.tags }}
-						</h5>
-					</div>
-				</div>
-				</a>
-		{% endfor %}
+	<h5 class="caps center pt4 dark-gray">select clients</h5>
+	<section class="flex-1 clearfix max-sm mx-auto pl2">
+		<img class="2x col col-12 sm-col-3 pr2 pb2" src="static/images/clients/udacity.png">
+		<img class="2x col col-12 sm-col-3 pr2 pb2" src="static/images/clients/carrot.png">
+		<img class="2x col col-12 sm-col-3 pr2 pb2" src="static/images/clients/anuta.png">
+		<img class="2x col col-12 sm-col-3 pr2 pb2" src="static/images/clients/mushi.png">
 	</section>
 	{% include "footer.html"%}
 {% endblock content %}
