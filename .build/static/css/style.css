@@ -16,14 +16,14 @@ body {
     fill: currentColor;
 }
 a {
-    color: #999;
+  transition: color .3s ease-in-out;
+  -moz-transition: color .3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
 }
+
 a:hover {
     text-decoration: none;
     color: #000;
-    transition: color .3s ease-in-out;
-    -moz-transition: color .3s ease-in-out;
-    -webkit-transition: color .3s ease-in-out;
 }
 .dark-gray {
     color: #999;
@@ -166,6 +166,7 @@ a:hover {
 
 p,li {
 	line-height: 1.5;
+  color: #676767;
 }
 
 .max-nn {
